@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-secondary px-4 py-2 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-neutral-100 text-primary border border-primary hover:bg-neutral-900/5 px-4 py-2 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-neutral-900 hover:bg-neutral-900/5 px-4 py-2 rounded-md transition-colors duration-200;
+  }
+  
+  .badge {
+    @apply rounded-full px-2 py-0.5 text-xs font-medium;
+  }
+  
+  .badge-sale {
+    @apply bg-red-500 text-white text-xs font-bold px-2 py-1 rounded;
+  }
+  
+  .badge-new {
+    @apply bg-green-500 text-white text-xs font-bold px-2 py-1 rounded;
+  }
+  
+  .badge-bestseller {
+    @apply bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded;
+  }
+}
+
+/* Hero Slider Animations */
+@keyframes autoSlideProgress {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slow-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes smooth-fade {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 15s ease-out infinite alternate;
+}
+
+.animate-smooth-fade {
+  animation: smooth-fade 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Make all SVG icons light/regular weight by default */
+svg {
+  font-weight: 400 !important;
+  stroke-width: 1.2 !important;
+}

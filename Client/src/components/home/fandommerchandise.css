@@ -1,0 +1,52 @@
+/* FandomMerchandise.css */
+
+/* Scrollbar hiding for tab navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Badge styles */
+.badge-sale {
+  @apply bg-red-500 text-white text-xs font-bold px-2 py-1 rounded;
+}
+
+.badge-new {
+  @apply bg-green-500 text-white text-xs font-bold px-2 py-1 rounded;
+}
+
+.badge-bestseller {
+  @apply bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded;
+}
+
+/* Animation for product cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .franchise-tabs {
+    padding: 0.5rem;
+  }
+  
+  .franchise-tab {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
