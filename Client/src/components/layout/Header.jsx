@@ -19,7 +19,7 @@ const Header = ({ isScrolled }) => {
   }
 
   const navLinkClasses = ({ isActive }) => 
-    `px-3 py-2 rounded-md transition-colors ${isActive ? 'text-primary-600 font-medium' : 'text-neutral-900 hover:text-primary-600'}`
+    `px-3 py-2 rounded-md transition-colors ${isActive ? 'text-white font-medium' : 'text-white/90 hover:text-white'}`
 
   return (
     <>
@@ -27,7 +27,7 @@ const Header = ({ isScrolled }) => {
     
       {isMobile ? (
         <>
-          <header className="w-full bg-white sticky top-0 z-50 shadow-[0_2px_8px_0_rgba(0,0,0,0.04)] mb-3">
+          <header className="w-full bg-[#002742] sticky top-0 z-50 shadow-lg">
             <div className="flex items-center justify-between w-full px-4 py-3">
               {/* Hamburger */}
               <button onClick={toggleMenu} aria-label="Open Menu" className="p-1">
@@ -36,9 +36,15 @@ const Header = ({ isScrolled }) => {
                   <line x1="7" y1="16" x2="25" y2="16" />
                 </svg>
               </button>
-              {/* Centered Serconst Logo */}
+              {/* Centered Cosmic Logo */}
         <div className="flex-1 flex justify-center">
-          <span className="bg-[#D22B2B] text-white font-bold text-xl px-3 py-1 rounded-sm tracking-tight">Serconst</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/src/assets/images/cosmiclogo.png" 
+              alt="Cosmic Logo" 
+              className="h-10 w-auto"
+            />
+          </Link>
         </div>
               {/* Icons */}
               <div className="flex items-center space-x-4">
@@ -65,7 +71,11 @@ const Header = ({ isScrolled }) => {
                 <div className="absolute top-0 left-0 h-full w-4/5 max-w-xs bg-white shadow-lg transition-transform duration-300 ease-in-out">
                   {/* Close button and logo */}
                   <div className="flex items-center justify-between px-4 py-4 border-b">
-                    <span className="bg-[#D22B2B] text-white font-bold text-xl px-3 py-1 rounded-sm tracking-tight mx-auto">Serconst</span>
+                    <img 
+                      src="/src/assets/images/cosmiclogo.png" 
+                      alt="Cosmic Logo" 
+                      className="h-8 w-auto mx-auto"
+                    />
                     <button onClick={closeMenu} aria-label="Close Menu" className="p-1">
                       <svg width="28" height="28" fill="none" stroke="#222" strokeWidth="2">
                         <line x1="8" y1="8" x2="20" y2="20" />
@@ -147,12 +157,16 @@ const Header = ({ isScrolled }) => {
         </>
       ) : (
         <header 
-          className={`sticky top-0 z-50 bg-neutral-100 transition-shadow duration-300 shadow-[0_2px_8px_0_rgba(0,0,0,0.04)] mb-3`}
+          className={`sticky top-0 z-50 bg-[#002742] transition-shadow duration-300 shadow-lg`}
         >
           <div className="w-[80%] mx-auto px-4 py-3 flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center" onClick={closeMenu}>
-              <span className="text-2xl font-bold text-primary-600">Serconst</span>
+              <img 
+                src="/src/assets/images/cosmiclogo.png" 
+                alt="Cosmic Logo" 
+                className="h-12 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -213,7 +227,7 @@ const Header = ({ isScrolled }) => {
             <div className="flex items-center space-x-4">
               <button 
                 aria-label="Search"
-                className="p-2 rounded-full hover:bg-neutral-900/5"
+                className="p-2 rounded-full text-white hover:bg-white/10"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -223,7 +237,7 @@ const Header = ({ isScrolled }) => {
               <Link 
                 to="/account"
                 aria-label="My Account"
-                className="p-2 rounded-full hover:bg-neutral-900/5"
+                className="p-2 rounded-full text-white hover:bg-white/10"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -233,7 +247,7 @@ const Header = ({ isScrolled }) => {
               <Link 
                 to="/cart"
                 aria-label="Shopping Cart"
-                className="p-2 rounded-full hover:bg-neutral-900/5 relative"
+                className="p-2 rounded-full text-white hover:bg-white/10 relative"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />

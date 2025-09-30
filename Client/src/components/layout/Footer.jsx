@@ -4,14 +4,20 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-neutral-900 text-neutral-50 pt-16 pb-8">
+    <footer className="bg-[#002742] text-neutral-50 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="md:col-span-4 lg:col-span-5">
-            <h3 className="text-2xl font-bold mb-4 text-white">Serconst</h3>
+            <div className="mb-4">
+              <img 
+                src="/src/assets/images/cosmiclogo.png" 
+                alt="Cosmic Logo" 
+                className="h-16 w-auto"
+              />
+            </div>
             <p className="text-neutral-300 mb-6 text-base leading-relaxed">
-              The Indian Garage Co. - Affordable fast fashion for the modern Indian. Quality products at unbeatable prices.
+              Cosmic Power Tech - Leading the way in sustainable solar solutions. Quality solar products at competitive prices.
             </p>
             <div className="flex space-x-5">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
@@ -54,8 +60,8 @@ const Footer = () => {
           </div>
 
           {/* Help Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Help</h3>
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-4 text-white">Help</h3>
             <ul className="space-y-2">
               <li><Link to="/support" className="text-neutral-100/80 hover:text-primary-300">Customer Support</Link></li>
               <li><Link to="/legal/shipping" className="text-neutral-100/80 hover:text-primary-300">Shipping Information</Link></li>
@@ -66,8 +72,8 @@ const Footer = () => {
           </div>
 
           {/* Company Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about-us" className="text-neutral-100/80 hover:text-primary-300">About Us</Link></li>
               <li><Link to="/blog" className="text-neutral-100/80 hover:text-primary-300">Blog</Link></li>

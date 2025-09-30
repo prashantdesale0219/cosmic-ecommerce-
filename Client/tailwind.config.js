@@ -7,28 +7,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#92c15b',    // Dark Green
-        secondary: '#92c15b',  // Medium Green
+        primary: '#0066CC',    // Main Blue
+        secondary: '#00A650',  // Green
         accent: {
-          500: '#92c51b',
+          500: '#004D99',      // Darker Blue
         },
         neutral: {
-          50: '#FAFAFA',
+          50: '#F8FAFC',
           100: '#ffffff',
-          200: '#EEEEEE',
-          300: '#E0E0E0',
-          400: '#BDBDBD',
-          500: '#9E9E9E',
-          600: '#757575',
-          700: '#616161',
-          800: '#424242',
-          900: '#222222',
+          200: '#E2E8F0',
+          300: '#CBD5E1',
+          400: '#94A3B8',
+          500: '#64748B',
+          600: '#475569',
+          700: '#334155',
+          800: '#1E293B',
+          900: '#0F172A',
         },
         success: {
-          500: '#14B37D',
+          500: '#00A650',      // Success Green
         },
         danger: {
-          500: '#E11D48',
+          500: '#00A650',
         },
         // Ensure white is available as a color
         white: '#ffffff',

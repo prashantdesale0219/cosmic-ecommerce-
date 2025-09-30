@@ -3,7 +3,7 @@ import React from 'react'
 const OfferStrip = () => {
 
   return (
-    <div className="text-neutral-100 pt-1 relative overflow-hidden text-center" style={{backgroundColor: '#a30113'}}>
+    <div className="text-neutral-100 pt-1 relative overflow-hidden text-center" style={{backgroundColor: '#92c51b'}}>
       <marquee 
         behavior="scroll" 
         direction="left" 

@@ -17,15 +17,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white hover:bg-secondary px-4 py-2 rounded-md transition-colors duration-200;
+    @apply bg-primary text-white hover:bg-accent-500 px-4 py-2 rounded-md transition-colors duration-200 shadow-md;
   }
   
   .btn-secondary {
-    @apply bg-neutral-100 text-primary border border-primary hover:bg-neutral-900/5 px-4 py-2 rounded-md transition-colors duration-200;
+    @apply bg-secondary text-white hover:bg-secondary/90 px-4 py-2 rounded-md transition-colors duration-200 shadow-md;
   }
   
   .btn-ghost {
-    @apply bg-transparent text-neutral-900 hover:bg-neutral-900/5 px-4 py-2 rounded-md transition-colors duration-200;
+    @apply bg-transparent text-primary hover:bg-primary/5 border border-primary px-4 py-2 rounded-md transition-colors duration-200;
   }
   
   .badge {
